@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela 2</title>
+</head>
+<body>
+    
+    <style>
+
+        .form{
+            position: relative;
+            text-align: center;
+            width: 50%;
+            height: 50%;
+            margin: 5% 25% 1% 25%;
+            border: 5px black solid;
+            padding: 10px 10px 10px 10px;
+        }
+        .erro{
+            color: red;
+        }
+        .termos{
+            overflow-y:scroll;
+            max-width:50%; 
+            height:260px;
+            border: 1px black solid;
+            margin: 5% 25% 1% 25%;
+        }
+
+    </style>
+
+    <div class="form">
+        Insira seu e-mail <br><br><input type="email" name="email" id="email">
+        
+        <div class="termos">
+            1.1 – O CARTÃO FIDELIDADE DO RESTAURANTE DOIS EM CENA, criado, desenvolvido e administrado pelo RESTAURANTE DOIS EM CENA. É um prestador de serviços que mantém o Programa de Fidelidade com o cliente do RESTAURANTE DOIS EM CENA.
+            1.2 – Para participar do programa, o participante toma conhecimento deste regulamento, recebe seu cartão virtual e/ou número de fidelidade e a partir do momento que o utilizá-lo estará pontuando e aderindo as regras aqui descritas.
+        </div>
+
+        <input id="caixa" type="checkbox"/><br><br>
+        <input type="submit" value="ENVIAR" onclick="validar ()"><br><br>
+        <div class="erro" id="erro"></div>
+    </div>
+
+    <script>
+
+        let email;
+
+        function validar(){
+            email = document.getElementById('email').value;
+            let trueEMAIL = testarEmail(email);
+            let checkbox = document.getElementById('caixa');
+
+            if (trueEMAIL == true){
+                if(checkbox.checked){
+                    console.log("cadastrado");
+                    alert("cadastrado");
+                }else{
+                    erro.innerHTML = "marque o checkbox";
+                }
+            }else{
+                erro.innerHTML = "email invalido";
+            }
+        }
+
+        function testarEmail(email) {
+            let re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+    </script>
+    
+</body>
+</html>
