@@ -10,29 +10,123 @@
     
     <style>
 
-        .form{
+    @media (max-width: 650px){
+            .tela{
             position: relative;
+            border: 5px black solid;
+            padding: 20px 20px 20px 20px;
+            }
+            .logo{
+            padding: 10px 10px 10px 10px;
+            margin: 0px 0px 0px 0px;
             text-align: center;
+            }
+            #cpf{
+            height: 25px;
+            width: 200px;
+            }
+            #tel{
+            height: 25px;
+            width: 55%; 
+            }
+        }
+        
+        @media (min-width: 900px){
+            .tela{
+            position: relative;
             width: 50%;
             height: 50%;
             margin: 5% 25% 1% 25%;
             border: 5px black solid;
+            padding: 20px 20px 20px 20px;
+            }
+            .logo{
             padding: 10px 10px 10px 10px;
+            margin: -25px 0px 0px 0px;
+            text-align: center;
+            }
+            #cpf, #tel{
+            height: 25px;
+            width: 200px;
+            }
+        }
+
+        .centro{
+            text-align: center;
         }
         .erro{
             color: red;
         }
+        #uf{
+            height: 30px;
+            width: 50px;
+        }
+        .button{
+            background-color: red;
+            color: white;
+            padding: 10px 20px 10px 20px;
+            border: 5px black none;
+            transition: all 0.3s ease;
+        }
+        .button:hover{
+            padding: 20px 30px 20px 30px;
+        }
 
     </style>
 
-    <div class="form">
-        Insira o CPF do cliente no formato 12345678909 <br><br><input type="number" name="cpf" id="cpf"><br><br><br><br>
-        UF <select name="uf" id="uf">
-            <option value="to">TO</option>
-        </select>
-        N° no formato (DD)DDDDD-DDDD <input type="tel" name="tel" id="tel"><br><br><br><br>
-        <input type="submit" value="ENVIAR" onclick="validar ()"><br><br>
-        <div class="erro" id="erro"></div>
+    <div class="tela">
+        <b>PRÉ CADASTRO</b>
+        <div class="logo">
+            <img src="logo.png" height="150px" width="150px">
+        </div>
+
+        <div class="inform"></div>
+
+        <div class="centro">
+            <div class="txt">
+                Insira o CPF do cliente<br><br>
+            </div>
+            <div class="form">
+                <input type="number" name="cpf" id="cpf"><br><br><br><br>
+            </div>
+            <div class="form">
+                <span>UF</span>
+                <select name="uf" id="uf">
+                    <option value="ac">AC</option>
+                    <option value="al">AL</option>
+                    <option value="am">AM</option>
+                    <option value="ap">AP</option>
+                    <option value="ba">BA</option>
+                    <option value="ce">CE</option>
+                    <option value="df">DF</option>
+                    <option value="es">ES</option>
+                    <option value="go">GO</option>
+                    <option value="ma">MA</option>
+                    <option value="mg">MG</option>
+                    <option value="ms">MS</option>
+                    <option value="mt">MT</option>
+                    <option value="pa">PA</option>
+                    <option value="pb">PB</option>
+                    <option value="pe">PE</option>
+                    <option value="pi">PI</option>
+                    <option value="pr">PR</option>
+                    <option value="rj">RJ</option>
+                    <option value="rn">RN</option>
+                    <option value="ro">RO</option>
+                    <option value="rr">RR</option>
+                    <option value="rs">RS</option>
+                    <option value="sc">SC</option>
+                    <option value="se">SE</option>
+                    <option value="sp">SP</option>
+                    <option value="to">TO</option>
+                </select>
+                <span>&nbsp;&nbsp; N°</span>
+                <input type="tel" name="tel" id="tel"><br><br><br><br>
+                <input class="button" type="submit" value="ENVIAR" onclick="validar ()"><br><br>
+            </div>
+            <div class="erro" id="erro"></div>
+        </div>
+
     </div>
 
     <script>
@@ -41,13 +135,7 @@
         //12345678909
         let phone;
         /*
-        (16) 91231-6165
-        (16) 3231-6165
-        16 91231-6165
-        16 3231-616
-        3231-6165
-        91231-6165
-        (63)99205-6862
+        63992056862
         */
 
         function validar(){
@@ -91,7 +179,7 @@
             }
 
             function validPhone (phone) {
-                var regex = new RegExp(/(\(?\d{2}\)?\s)?(\d{4,5}\-\d{4})/g);
+                var regex = new RegExp('^((1[1-9])|([2-9][0-9]))((3[0-9]{3}[0-9]{4})|(9[0-9]{3}[0-9]{5}))$');
                 return regex.test(phone);
         }
 
