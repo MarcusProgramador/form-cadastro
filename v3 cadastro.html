@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela 2</title>
+</head>
+<body>
+    
+    <style>
+        @media (max-width: 915px){
+            .tela{
+                position: absolute;
+                left: 0vw;
+                top: 0vh;
+                width: 100vw;
+                height: 100vh;
+            }
+            .logo{
+                position: absolute;
+                left: 0vw;
+                top: 0vh;
+                width: 100vw;
+                height: 15vh;
+                background-color: #9A1914;
+            }
+            .logo_img{
+                position: absolute;
+                left: 1vw;
+                top: 0vh;
+                width: 15vh;
+                height: 15vh;
+            }
+            .logo_b{
+                position: absolute;
+                left: 34vw;
+                top: 5.5vh;
+                color: #ffffff;
+                font-size: 3.5vh;
+            }
+            .inform{
+                position: absolute;
+                left: 0vw;
+                top: 100vh;
+                width: 100vw;
+                height: 15vh;
+                background-color: black;
+            }
+            .centro{
+                position: absolute;
+                left: 0vw;
+                top: 15vh;
+                width: 100vw;
+                height: 85vh;
+                background-color: #F3C645;
+            }
+            .centro_div{
+                position: absolute;
+                left: 5%;
+                top: 7%;
+                width: 90%;
+                height: 100%;
+            }
+
+            .centro_txtDes{
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                width: 100%;
+                height: 25%;
+                font-size: 2.8vh;
+            }
+            #email{
+                position: absolute;
+                left: 0%;
+                top: 23.5%;
+                width: 98%;
+                height: 6.5%;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                font-size: 2.4vh;
+            }
+            .centro_des_termos{
+                position: absolute;
+                left: 0%;
+                top: 35%;
+                font-size: 2.6vh;
+            }
+            .centro_termos{
+                position: absolute;
+                overflow-y:scroll;
+                left: 0%;
+                top: 41%;
+                width: 93%;
+                height: 25%;
+                background-color: white;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                padding: 10px 10px 0px 10px;
+                font-size: 2.4vh;
+            }
+            #caixa{
+                position: absolute;
+                left: 0%;
+                top: 68%;
+                width: 5%;
+                height: 5%;
+            }
+            .centro_txt_caixa{
+                position: absolute;
+                left: 7%;
+                top: 70%;
+                font-size: 2.4vh;
+            }
+            .button{
+                position: absolute;
+                left: 0%;
+                top: 75%;
+                width: 25%;
+                height: 7.2%;
+                border: #9A1914 1px solid;
+                border-radius: 5px;
+                background-color: #9A1914;
+                color: white;
+                font-size: 2.4vh;
+            }
+            .erro{
+                position: absolute;
+                left: 0%;
+                bottom: 4%;
+                width: 100%;
+                height: 12%;
+                color: #9A1914;
+                font-size: 3vh;
+            }
+        }
+        @media (min-width: 915px){
+            .tela{
+                position: absolute;
+                left: 0vw;
+                top: 0vh;
+                width: 100vw;
+                height: 100vh;
+            }
+            .logo{
+                position: absolute;
+                left: 0vw;
+                top: 0vh;
+                width: 100vw;
+                height: 20vh;
+                background-color: #9A1914;
+            }
+            .logo_img{
+                position: absolute;
+                left: 5vw;
+                top: 0vh;
+                width: 120px;
+                height: 120px;
+            }
+            .logo_b{
+                position: absolute;
+                left: 36vw;
+                top: 7vh;
+                color: #ffffff;
+                font-size: 6vh;
+            }
+            .inform{
+                position: absolute;
+                left: 0vw;
+                top: 20vh;
+                width: 30vw;
+                height: 80vh;
+                background-color: black;
+            }
+            .centro{
+                position: absolute;
+                left: 30vw;
+                top: 20vh;
+                width: 70vw;
+                height: 80vh;
+                background-color: #F3C645;
+            }
+            .centro_div{
+                position: absolute;
+                left: 20%;
+                top: 8%;
+                width: 60%;
+                height: 80%;
+            }
+            .centro_txtDes{
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                width: 100%;
+                height: 25%;
+                font-size: 2.8vh;
+            }
+            #email{
+                position: absolute;
+                left: 0%;
+                top: 22%;
+                width: 81.7%;
+                height: 11.2%;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                font-size: 2.4vh;
+            }
+            .centro_des_termos{
+                position: absolute;
+                left: 0%;
+                top: 37%;
+                font-size: 2.6vh;
+            }
+            .centro_termos{
+                position: absolute;
+                overflow-y:scroll;
+                left: 0%;
+                top: 43%;
+                width: 80%;
+                height: 35%;
+                background-color: white;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                padding: 10px 10px 0px 10px;
+                font-size: 2.4vh;
+            }
+            #caixa{
+                position: absolute;
+                left: 0%;
+                top: 81%;
+                width: 5%;
+                height: 5%;
+            }
+            .centro_txt_caixa{
+                position: absolute;
+                left: 6%;
+                top: 82%;
+                font-size: 2.4vh;
+            }
+            .button{
+                position: absolute;
+                left: 0%;
+                top: 92%;
+                width: 20.9%;
+                height: 12.5%;
+                border: #9A1914 1px solid;
+                border-radius: 5px;
+                background-color: #9A1914;
+                color: white;
+                font-size: 2.4vh;
+            }
+            .erro{
+                position: absolute;
+                left: 0%;
+                bottom: -12%;
+                color: #9A1914;
+                font-size: 3vh;
+            }
+        }
+    </style>
+
+    <div class="tela">
+
+        <div class="logo">
+            <img class="logo_img" src="logo.png" height="150px" width="150px">
+            <b class="logo_b">PRÉ CADASTRO</b>
+        </div>
+
+        <div class="inform"></div>
+
+        <div class="centro">
+            <div class="centro_div">
+                <span class="centro_txtDes">
+                    Olá XXXXXXX, você já está bem perto de começar a usufruir de todos os benefícios
+                    do Carnes Bom Bife, mas, antes preciso que complete seu cadastro para validar sua
+                    participação. É rapidinho!
+                </span>
+
+                <input type="email" name="email" id="email" placeholder="Insira seu email">
+
+                <span class="centro_des_termos">Termos do Programa de fidelidade</span>
+                <div class="centro_termos">
+                    Política de Privacidade
+                    Na (nome empresarial simplificado), privacidade e segurança são prioridades e nos comprometemos com a transparência do tratamento de dados pessoais dos nossos usuários/clientes. Por isso, esta presente Política de Privacidade estabelece como é feita a coleta, uso e transferência de informações de clientes ou outras pessoas que acessam ou usam nosso site.
+                    
+                    Ao utilizar nossos serviços, você entende que coletaremos e usaremos suas informações pessoais nas formas descritas nesta Política, sob as normas da Constituição Federal de 1988 (art. 5º, LXXIX; e o art. 22º, XXX – incluídos pela EC 115/2022), das normas de Proteção de Dados (LGPD, Lei Federal 13.709/2018), das disposições consumeristas da Lei Federal 8078/1990 e as demais normas do ordenamento jurídico brasileiro aplicáveis.
+                    
+                    Dessa forma, a (nome empresarial), doravante denominada simplesmente como “(nome empresarial simplificado)”, inscrita no CNPJ/MF sob o nº (nº do CNPJ), no papel de Controladora de Dados, obriga-se ao disposto na presente Política de Privacidade.
+                    
+                    1. Quais dados coletamos sobre você e para qual finalidade?
+                    Nosso site coleta e utiliza alguns dados pessoais seus, de forma a viabilizar a prestação de serviços e aprimorar a experiência de uso.
+                    
+                    1.1. Dados pessoais fornecidos pelo titular
+                        Dado e finalidade
+                        Dado e finalidade
+                        Dado e finalidade
+                        Dado e finalidade
+                    1.2. Dados pessoais coletados automaticamente
+                        Dado e finalidade
+                        Dado e finalidade
+                        Dado e finalidade
+                        Dado e finalidade
+                </div>
+                    
+                <input id="caixa" type="checkbox"/> 
+                <span class="centro_txt_caixa">Aceite os termos</span>
+
+                <input class="button" type="submit" value="ENVIAR" onclick="validar ()"><br><br>
+                <div class="erro" id="erro"></div>
+            </div>       
+        </div>
+
+    </div>
+
+    <script>
+
+        let email;
+
+        function validar(){
+            email = document.getElementById('email').value;
+            let trueEMAIL = testarEmail(email);
+            let checkbox = document.getElementById('caixa');
+
+            if (trueEMAIL == true){
+                if(checkbox.checked){
+                    console.log("cadastrado");
+                    alert("cadastrado");
+                }else{
+                    erro.innerHTML = "marque o checkbox";
+                }
+            }else{
+                erro.innerHTML = "email invalido";
+            }
+        }
+
+        function testarEmail(email) {
+            let re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela 1</title>
+</head>
+<body>
+    
+    <style>
+        @media (max-width: 915px){
+            .tela{
+                position: absolute;
+                left: 0vw;
+                top: 0vh;
+                width: 100vw;
+                height: 100vh;
+            }
+            .logo{
+                position: absolute;
+                left: 0vw;
+                top: 0vh;
+                width: 100vw;
+                height: 15vh;
+                background-color: #9A1914;
+            }
+            .logo_img{
+                position: absolute;
+                left: 1vw;
+                top: 0vh;
+                width: 15vh;
+                height: 15vh;
+            }
+            .logo_b{
+                position: absolute;
+                left: 34vw;
+                top: 5.5vh;
+                color: #ffffff;
+                font-size: 3.5vh;
+            }
+            .inform{
+                position: absolute;
+                left: 0vw;
+                top: 75vh;
+                width: 100vw;
+                height: 25vh;
+                background-color: black;
+            }
+            .centro{
+                position: absolute;
+                left: 0vw;
+                top: 15vh;
+                width: 100vw;
+                height: 60vh;
+                background-color: #F3C645;
+            }
+            .centro_div{
+                position: absolute;
+                left: 5%;
+                top: 35%;
+                width: 90%;
+                height: 50%;
+            }
+            .centro_span_titulo{
+                position: absolute;
+                left: 0%;
+                top: -15%;
+                width: 100%;
+                height: 20%;
+                font-size: 3vh;
+            }
+            #cpf{
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                width: 98%;
+                height: 18%;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                font-size: 2.4vh;
+            }
+            #uf{
+                position: absolute;
+                left: 0%;
+                top: 30%;
+                width: 15%;
+                height: 20%;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                font-size: 2.4vh;
+            }
+            #dddNum{
+                position: absolute;
+                left: 18%;
+                top: 30%;
+                width: 15%;
+                height: 20%;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                font-size: 2.4vh;
+            }
+            #tel{
+                position: absolute;
+                right: 0%;
+                top: 30%;
+                width: 60%;
+                height: 18%;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                font-size: 2.4vh;
+            }
+            .button{
+                position: absolute;
+                left: 0%;
+                top: 60%;
+                width: 25%;
+                height: 20%;
+                border: #9A1914 1px solid;
+                border-radius: 5px;
+                background-color: #9A1914;
+                color: white;
+                font-size: 2.4vh;
+            }
+            .erro{
+                position: absolute;
+                left: 0%;
+                bottom: 0%;
+                width: 100%;
+                height: 12%;
+                color: #9A1914;
+                font-size: 3vh;
+            } 
+        }
+        @media (min-width: 915px){
+            .tela{
+                position: absolute;
+                left: 0vw;
+                top: 0vh;
+                width: 100vw;
+                height: 100vh;
+            }
+            .logo{
+                position: absolute;
+                left: 0vw;
+                top: 0vh;
+                width: 100vw;
+                height: 20vh;
+                background-color: #9A1914;
+            }
+            .logo_img{
+                position: absolute;
+                left: 5vw;
+                top: 0vh;
+                width: 120px;
+                height: 120px;
+            }
+            .logo_b{
+                position: absolute;
+                left: 36vw;
+                top: 7vh;
+                color: #ffffff;
+                font-size: 6vh;
+            }
+            .inform{
+                position: absolute;
+                left: 0vw;
+                top: 20vh;
+                width: 30vw;
+                height: 80vh;
+                background-color: black;
+            }
+            .centro{
+                position: absolute;
+                left: 30vw;
+                top: 20vh;
+                width: 70vw;
+                height: 80vh;
+                background-color: #F3C645;
+            }
+            .centro_div{
+                position: absolute;
+                left: 25%;
+                top: 35%;
+                width: 50%;
+                height: 50%;
+            }
+            .centro_span_titulo{
+                position: absolute;
+                left: 0%;
+                top: -15%;
+                width: 100%;
+                height: 20%;
+                font-size: 3vh;
+            }
+            #cpf{
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                width: 98%;
+                height: 18%;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                font-size: 2.4vh;
+            }
+            #uf{
+                position: absolute;
+                left: 0%;
+                top: 30%;
+                width: 15%;
+                height: 20%;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                font-size: 2.4vh;
+            }
+            #dddNum{
+                position: absolute;
+                left: 18%;
+                top: 30%;
+                width: 15%;
+                height: 20%;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                font-size: 2.4vh;
+            }
+            #tel{
+                position: absolute;
+                right: 0%;
+                top: 30%;
+                width: 60%;
+                height: 18%;
+                border: #ffffff 1px solid;
+                border-radius: 5px;
+                font-size: 2.4vh;
+            }
+            .button{
+                position: absolute;
+                left: 0%;
+                top: 60%;
+                width: 25%;
+                height: 20%;
+                border: #9A1914 1px solid;
+                border-radius: 5px;
+                background-color: #9A1914;
+                color: white;
+                font-size: 2.4vh;
+            }
+            .erro{
+                position: absolute;
+                left: 0%;
+                bottom: 0%;
+                width: 100%;
+                height: 12%;
+                color: #9A1914;
+                font-size: 3vh;
+            }
+        }
+    </style>
+
+    <div class="tela">
+
+        <div class="logo">
+            <img class="logo_img" src="logo.png" height="120px" width="120px">
+            <b class="logo_b">PRÉ-CADASTRO</b>
+        </div>
+
+        <div class="inform"></div>
+
+        <div class="centro">
+            <div class="centro_div">
+                <span class="centro_span_titulo">PRÉ-CADASTRO</span>
+
+                <input type="number" name="cpf" id="cpf" autocomplete="off" placeholder="Insira o CPF do cliente">
+
+                <select name="uf" id="uf" onChange="ddd ()">
+                    <option value="">UF</option>
+                    <option value="ac">AC</option>
+                    <option value="al">AL</option>
+                    <option value="am">AM</option>
+                    <option value="ap">AP</option>
+                    <option value="ba">BA</option>
+                    <option value="ce">CE</option>
+                    <option value="df">DF</option>
+                    <option value="es">ES</option>
+                    <option value="go">GO</option>
+                    <option value="ma">MA</option>
+                    <option value="mg">MG</option>
+                    <option value="ms">MS</option>
+                    <option value="mt">MT</option>
+                    <option value="pa">PA</option>
+                    <option value="pb">PB</option>
+                    <option value="pe">PE</option>
+                    <option value="pi">PI</option>
+                    <option value="pr">PR</option>
+                    <option value="rj">RJ</option>
+                    <option value="rn">RN</option>
+                    <option value="ro">RO</option>
+                    <option value="rr">RR</option>
+                    <option value="rs">RS</option>
+                    <option value="sc">SC</option>
+                    <option value="se">SE</option>
+                    <option value="sp">SP</option>
+                    <option value="to">TO</option>
+                </select>
+
+                <select name="ddd" id="dddNum">
+                    <option value="">DDD</option>
+                </select>
+
+                <input type="tel" name="tel" id="tel" placeholder="Telefone do cliente">
+
+                <input class="button" type="submit" value="ENVIAR" onclick="validar ()">
+
+                <div class="erro" id="erro"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        //variavel uf
+        let uf;
+        let dddNumVar;
+        let dddCity;
+
+        function ddd (){
+            uf = (document.getElementById('uf').value);
+
+            dddCity = {
+                ac: '<option value="68">68</option>',
+                al:'<option value="82">82</option>',
+                am:'<option value="92">92</option><option value="97">97</option>',
+                ap:'<option value="96">96</option>',
+                ba:'<option value="71">71</option><option value="73">73</option><option value="74">74</option><option value="75">75</option><option value="77">77</option>',
+                ce:'<option value="85">85</option><option value="88">88</option>',
+                df:'<option value="61">61</option>',
+                es:'<option value="27">27</option><option value="28">28</option>',
+                go:'<option value="62">62</option><option value="64">64</option>',
+                ma:'<option value="98">98</option><option value="99">99</option>',
+                mg:'<option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="37">37</option><option value="38">38</option>',
+                ms:'<option value="67">67</option>',
+                mt:'<option value="65">65</option><option value="66">66</option>',
+                pa:'<option value="91">91</option><option value="93">93</option><option value="94">94</option>',
+                pb:'<option value="83">83</option>',
+                pe:'<option value="81">81</option><option value="87">87</option>',
+                pi:'<option value="86">86</option><option value="89">89</option>',
+                pr:'<option value="41">41</option><option value="42">42</option><option value="44">44</option><option value="45">45</option><option value="46">46</option>',
+                rj:'<option value="21">21</option><option value="22">22</option><option value="24">24</option>',
+                rn:'<option value="84">84</option>',
+                ro:'<option value="69">69</option>',
+                rr:'<option value="95">95</option>',
+                rs:'<option value="51">51</option><option value="53">53</option><option value="54">54</option><option value="55">55</option>',
+                sc:'<option value="47">47</option><option value="48">48</option><option value="49">49</option>',
+                se:'<option value="79">79</option>',
+                sp:'<option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option>',
+                to:'<option value="63">63</option>'
+            } 
+
+            dddNum.innerHTML = dddCity[uf];
+        }
+
+        let strCPF;
+        //12345678909
+        let phone;
+        /*
+        63992056862
+        */
+
+        function validar(){
+            dddNumVar = document.getElementById('dddNum').value;
+            strCPF = document.getElementById('cpf').value; 
+            phone = document.getElementById('tel').value;
+            let trueCPF = TestaCPF(strCPF);
+            let truePhone = validPhone(dddNumVar+phone);
+
+            if (trueCPF == true && truePhone == true){
+                window.location.href = "v3 cadastro.html";
+            }else if(trueCPF == false && truePhone == true){
+                erro.innerHTML = "cpf invalido";
+            }else if(truePhone == false && trueCPF == true){
+                erro.innerHTML = "número invalido";
+            }else if(truePhone == false && trueCPF == false){
+                erro.innerHTML = "número e cpf invalidos";
+            }
+        }
+
+        function TestaCPF(strCPF){
+            let Soma;
+            let Resto;
+            Soma = 0;
+
+                if (strCPF == "00000000000") return false;
+            
+            for (i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+            Resto = (Soma * 10) % 11;
+            
+                if ((Resto == 10) || (Resto == 11))  Resto = 0;
+                if (Resto != parseInt(strCPF.substring(9, 10)) ) return false;
+            
+            Soma = 0;
+                for (i = 1; i <= 10; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i);
+                Resto = (Soma * 10) % 11;
+            
+                if ((Resto == 10) || (Resto == 11))  Resto = 0;
+                if (Resto != parseInt(strCPF.substring(10, 11) ) ) return false;
+                return true;
+            }
+
+        function validPhone (phone) {
+                let regex = new RegExp('^((1[1-9])|([2-9][0-9]))((3[0-9]{3}[0-9]{4})|(9[0-9]{3}[0-9]{5}))$');
+                return regex.test(phone);
+        }
+
+    </script>
+    
+</body>
+</html>
