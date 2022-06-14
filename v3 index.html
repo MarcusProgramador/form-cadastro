@@ -289,7 +289,7 @@
             <div class="centro_div">
                 <span class="centro_span_titulo">PRÉ-CADASTRO</span>
 
-                <input type="number" name="cpf" id="cpf" autocomplete="off" placeholder="Insira o CPF do cliente">
+                <input type="number" name="cpf" id="cpf" autocomplete="off" placeholder="Insira o CPF do cliente" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11">
 
                 <select name="uf" id="uf" onChange="ddd ()">
                     <option value="">UF</option>
@@ -326,7 +326,7 @@
                     <option value="">DDD</option>
                 </select>
 
-                <input type="number" name="tel" id="tel" placeholder="Telefone do cliente">
+                <input type="number" name="tel" id="tel" placeholder="Telefone do cliente" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="9">
 
                 <input class="button" type="submit" value="ENVIAR" onclick="validar ()">
 
