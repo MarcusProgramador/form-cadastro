@@ -394,7 +394,7 @@
             let truePhone = validPhone(dddNumVar+phone);
 
             if (trueCPF == true && truePhone == true){
-                window.location.href = "v3 cadastro.html";
+                window.location.href = "v3 cadastro.html?cpf="+strCPF+"&numero="+dddNumVar+phone+"&uf="+uf;
             }else if(trueCPF == false && truePhone == true){
                 erro.innerHTML = "CPF inválido";
             }else if(truePhone == false && trueCPF == true){
